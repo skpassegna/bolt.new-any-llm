@@ -1,15 +1,14 @@
-[![Bolt.new: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index.jpg)](https://bolt.new)
+[![oTToDev: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index.jpg)](https://bolt.new)
 
-# Bolt.new Fork by Cole Medin - oTToDev
+# oTToDev
 
-This fork of Bolt.new (oTToDev) allows you to choose the LLM that you use for each prompt! Currently, you can use OpenAI, Anthropic, Ollama, OpenRouter, Gemini, LMStudio, Mistral, xAI, HuggingFace, DeepSeek, or Groq models - and it is easily extended to use any other model supported by the Vercel AI SDK! See the instructions below for running this locally and extending it to include more models.
+This project is a fork of [Bolt.new by StackBlitz](https://github.com/stackblitz/bolt.new) and is maintained by Cole Medin (github: coleam00). It allows you to choose the LLM that you use for each prompt! Currently, you can use OpenAI, Anthropic, Ollama, OpenRouter, Gemini, LMStudio, Mistral, xAI, HuggingFace, DeepSeek, or Groq models - and it is easily extended to use any other model supported by the Vercel AI SDK! See the instructions below for running this locally and extending it to include more models.
 
 Check the [oTToDev Docs](https://coleam00.github.io/bolt.new-any-llm/) for more information.
 
 ## Join the community for oTToDev!
 
 https://thinktank.ottomator.ai
-
 
 ## Requested Additions - Feel Free to Contribute!
 
@@ -18,7 +17,7 @@ https://thinktank.ottomator.ai
 - ✅ Autogenerate Ollama models from what is downloaded (@yunatamos)
 - ✅ Filter models by provider (@jasonm23)
 - ✅ Download project as ZIP (@fabwaseem)
-- ✅ Improvements to the main Bolt.new prompt in `app\lib\.server\llm\prompts.ts` (@kofi-bhr)
+- ✅ Improvements to the main Bolt.new prompt in `app/lib/.server/llm/prompts.ts` (@kofi-bhr)
 - ✅ DeepSeek API Integration (@zenith110)
 - ✅ Mistral API Integration (@ArulGandhi)
 - ✅ "Open AI Like" API Integration (@ZerxZ)
@@ -52,26 +51,26 @@ https://thinktank.ottomator.ai
 - ⬜ Upload documents for knowledge - UI design templates, a code base to reference coding style, etc.
 - ⬜ Voice prompting
 
-## Bolt.new: AI-Powered Full-Stack Web Development in the Browser
+## oTToDev: AI-Powered Full-Stack Web Development in the Browser
 
-Bolt.new is an AI-powered web development agent that allows you to prompt, run, edit, and deploy full-stack applications directly from your browser—no local setup required. If you're here to build your own AI-powered web dev agent using the Bolt open source codebase, [click here to get started!](./CONTRIBUTING.md)
+oTToDev is an AI-powered web development agent that allows you to prompt, run, edit, and deploy full-stack applications directly from your browser—no local setup required. If you're here to build your own AI-powered web dev agent using the oTToDev open source codebase, [click here to get started!](./CONTRIBUTING.md)
 
-## What Makes Bolt.new Different
+## What Makes oTToDev Different
 
-Claude, v0, etc are incredible- but you can't install packages, run backends, or edit code. That’s where Bolt.new stands out:
+Claude, v0, etc are incredible- but you can't install packages, run backends, or edit code. That’s where oTToDev stands out:
 
-- **Full-Stack in the Browser**: Bolt.new integrates cutting-edge AI models with an in-browser development environment powered by **StackBlitz’s WebContainers**. This allows you to:
+- **Full-Stack in the Browser**: oTToDev integrates cutting-edge AI models with an in-browser development environment powered by **StackBlitz’s WebContainers**. This allows you to:
   - Install and run npm tools and libraries (like Vite, Next.js, and more)
   - Run Node.js servers
   - Interact with third-party APIs
   - Deploy to production from chat
   - Share your work via a URL
 
-- **AI with Environment Control**: Unlike traditional dev environments where the AI can only assist in code generation, Bolt.new gives AI models **complete control** over the entire  environment including the filesystem, node server, package manager, terminal, and browser console. This empowers AI agents to handle the whole app lifecycle—from creation to deployment.
+- **AI with Environment Control**: Unlike traditional dev environments where the AI can only assist in code generation, oTToDev gives AI models **complete control** over the entire environment including the filesystem, node server, package manager, terminal, and browser console. This empowers AI agents to handle the whole app lifecycle—from creation to deployment.
 
-Whether you’re an experienced developer, a PM, or a designer, Bolt.new allows you to easily build production-grade full-stack applications.
+Whether you’re an experienced developer, a PM, or a designer, oTToDev allows you to easily build production-grade full-stack applications.
 
-For developers interested in building their own AI-powered development tools with WebContainers, check out the open-source Bolt codebase in this repo!
+For developers interested in building their own AI-powered development tools with WebContainers, check out the open-source oTToDev codebase in this repo!
 
 ## Setup
 
@@ -83,9 +82,9 @@ Many of you are new users to installing software from Github. If you have any in
 
 Pay attention to the installer notes after completion. 
 
-On all operating systems, the path to Node.js should automatically be added to your system path. But you can check your path if you want to be sure. On Windows, you can search for "edit the system environment variables" in your system, select "Environment Variables..." once you are in the system properties, and then check for a path to Node in your "Path" system variable. On a Mac or Linux machine, it will tell you to check if /usr/local/bin is in your $PATH. To determine if usr/local/bin is included in $PATH open your Terminal and run:
+On all operating systems, the path to Node.js should automatically be added to your system path. But you can check your path if you want to be sure. On Windows, you can search for **"edit the system environment variables"** in your system, select **"Environment Variables..."** once you are in the system properties, and then check for a path to Node in your "Path" system variable. On a Mac or Linux machine, it will tell you to check if `/usr/local/bin` is in your `$PATH`. To determine if `usr/local/bin` is included in $PATH open your Terminal and run:
 
-```
+```bash
 echo $PATH .
 ```
 
@@ -93,17 +92,17 @@ If you see usr/local/bin in the output then you're good to go.
 
 3. Clone the repository (if you haven't already) by opening a Terminal window (or CMD with admin permissions) and then typing in this:
 
-```
+```bash
 git clone https://github.com/coleam00/bolt.new-any-llm.git
 ```
 
-3. Rename .env.example to .env.local and add your LLM API keys. You will find this file on a Mac at "[your name]/bold.new-any-llm/.env.example". For Windows and Linux the path will be similar.
+3. Rename `.env.example` to `.env.local` and add your LLM API keys. You will find this file on a Mac at **"[your name]/bolt.new-any-llm/.env.example"**. For Windows and Linux the path will be similar.
 
 ![image](https://github.com/user-attachments/assets/7e6a532c-2268-401f-8310-e8d20c731328)
 
 If you can't see the file indicated above, its likely you can't view hidden files. On Mac, open a Terminal window and enter this command below. On Windows, you will see the hidden files option in File Explorer Settings. A quick Google search will help you if you are stuck here.
 
-```
+```bash
 defaults write com.apple.finder AppleShowAllFiles YES
 ```
 
@@ -115,7 +114,7 @@ Get your Open AI API Key by following these instructions: https://help.openai.co
 
 Get your Anthropic API Key in your account settings: https://console.anthropic.com/settings/keys
 
-```
+```yaml
 GROQ_API_KEY=XXX
 OPENAI_API_KEY=XXX
 ANTHROPIC_API_KEY=XXX
@@ -123,13 +122,13 @@ ANTHROPIC_API_KEY=XXX
 
 Optionally, you can set the debug level:
 
-```
+```yaml
 VITE_LOG_LEVEL=debug
 ```
 
 And if using Ollama set the DEFAULT_NUM_CTX, the example below uses 8K context and ollama running on localhost port 11434:
 
-```
+```yaml
 OLLAMA_API_BASE_URL=http://localhost:11434
 DEFAULT_NUM_CTX=8192
 ```
@@ -138,7 +137,7 @@ DEFAULT_NUM_CTX=8192
 
 ## Run with Docker
 
-Prerequisites:
+### Prerequisites:
 
 Git and Node.js as mentioned above, as well as Docker: https://www.docker.com/
 
@@ -146,11 +145,13 @@ Git and Node.js as mentioned above, as well as Docker: https://www.docker.com/
 
 NPM scripts are provided for convenient building:
 
+__Development build__
 ```bash
-# Development build
 npm run dockerbuild
+```
 
-# Production build
+__Production build__
+```bash
 npm run dockerbuild:prod
 ```
 
@@ -158,11 +159,13 @@ npm run dockerbuild:prod
 
 You can use Docker's target feature to specify the build environment instead of using NPM scripts if you wish:
 
+__Development build__
 ```bash
-# Development build
 docker build . --target bolt-ai-development
+```
 
-# Production build
+__Production build__
+```bash
 docker build . --target bolt-ai-production
 ```
 
@@ -170,29 +173,29 @@ docker build . --target bolt-ai-production
 
 Use Docker Compose profiles to manage different environments:
 
+__Development environment__
 ```bash
-# Development environment
 docker-compose --profile development up
+```
 
-# Production environment
+__Production environment__
+```bash
 docker-compose --profile production up
 ```
 
-When you run the Docker Compose command with the development profile, any changes you
-make on your machine to the code will automatically be reflected in the site running
-on the container (i.e. hot reloading still applies!).
+When you run the Docker Compose command with the development profile, any changes you make on your machine to the code will automatically be reflected in the site running on the container (i.e. hot reloading still applies!).
 
 ## Run Without Docker
 
 1. Install dependencies using Terminal (or CMD in Windows with admin permissions):
 
-```
+```bash
 pnpm install
 ```
 
-If you get an error saying "command not found: pnpm" or similar, then that means pnpm isn't installed. You can install it via this:
+If you get an error saying **"command not found: pnpm"** or similar, then that means pnpm isn't installed. You can install it via this:
 
-```
+```bash
 sudo npm install -g pnpm
 ```
 

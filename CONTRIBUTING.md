@@ -8,7 +8,7 @@ First off, thank you for considering contributing to oTToDev! This fork aims to 
 - [Pull Request Guidelines](#pull-request-guidelines)
 - [Coding Standards](#coding-standards)
 - [Development Setup](#development-setup)
-- [Deploymnt with Docker](#docker-deployment-documentation)
+- [Docker Deployment Documentation](#docker-deployment-documentation)
 - [Project Structure](#project-structure)
 
 ## Code of Conduct
@@ -133,11 +133,13 @@ This guide outlines various methods for building and deploying the application u
 
 NPM scripts are provided for convenient building:
 
-```bash
-# Development build
-npm run dockerbuild
 
-# Production build
+__Development build__
+```bash
+npm run dockerbuild
+```
+__Production build__
+```bash
 npm run dockerbuild:prod
 ```
 
@@ -145,11 +147,12 @@ npm run dockerbuild:prod
 
 You can use Docker's target feature to specify the build environment:
 
+__Development build__
 ```bash
-# Development build
 docker build . --target bolt-ai-development
-
-# Production build
+```
+__Production build__
+```bash
 docker build . --target bolt-ai-production
 ```
 
@@ -157,11 +160,13 @@ docker build . --target bolt-ai-production
 
 Use Docker Compose profiles to manage different environments:
 
+__Development build__
 ```bash
-# Development environment
 docker-compose --profile development up
+```
 
-# Production environment
+__Production build__
+```bash
 docker-compose --profile production up
 ```
 
@@ -169,11 +174,14 @@ docker-compose --profile production up
 
 After building using any of the methods above, run the container with:
 
-```bash
-# Development
-docker run -p 5173:5173 --env-file .env.local bolt-ai:development
 
-# Production
+__Development__
+```bash
+docker run -p 5173:5173 --env-file .env.local bolt-ai:development
+```
+
+__Production__
+```bash
 docker run -p 5173:5173 --env-file .env.local bolt-ai:production
 ```
 
@@ -211,7 +219,7 @@ Ensure you have the appropriate `.env.local` file configured before running the 
 
 ## Notes
 
-- Port 5173 is exposed and mapped for both development and production environments
+- Port **5173** is exposed and mapped for both development and production environments
 - Environment variables are loaded from `.env.local`
 - Different profiles (development/production) can be used for different deployment scenarios
 - The configuration supports both local development and production deployment
