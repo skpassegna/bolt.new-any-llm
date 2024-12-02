@@ -50,14 +50,14 @@ export const PortDropdown = memo(
       <div className="relative z-port-dropdown" ref={dropdownRef}>
         <IconButton icon="i-ph:plug" onClick={() => setIsDropdownOpen(!isDropdownOpen)} />
         {isDropdownOpen && (
-          <div className="absolute right-0 mt-2 bg-bolt-elements-background-depth-2 border border-bolt-elements-borderColor rounded shadow-sm min-w-[140px] dropdown-animation">
-            <div className="px-4 py-2 border-b border-bolt-elements-borderColor text-sm font-semibold text-bolt-elements-textPrimary">
+          <div className="absolute right-0 mt-2 bg-ottodev-elements-background-depth-2 border border-ottodev-elements-borderColor rounded shadow-sm min-w-[140px] dropdown-animation">
+            <div className="px-4 py-2 border-b border-ottodev-elements-borderColor text-sm font-semibold text-ottodev-elements-textPrimary">
               Ports
             </div>
             {sortedPreviews.map((preview) => (
               <div
                 key={preview.port}
-                className="flex items-center px-4 py-2 cursor-pointer hover:bg-bolt-elements-item-backgroundActive"
+                className="flex items-center px-4 py-2 cursor-pointer hover:bg-ottodev-elements-item-backgroundActive"
                 onClick={() => {
                   setActivePreviewIndex(preview.index);
                   setIsDropdownOpen(false);
@@ -67,8 +67,8 @@ export const PortDropdown = memo(
                 <span
                   className={
                     activePreviewIndex === preview.index
-                      ? 'text-bolt-elements-item-contentAccent'
-                      : 'text-bolt-elements-item-contentDefault group-hover:text-bolt-elements-item-contentActive'
+                      ? 'text-ottodev-elements-item-contentAccent'
+                      : 'text-ottodev-elements-item-contentDefault group-hover:text-ottodev-elements-item-contentActive'
                   }
                 >
                   {preview.port}

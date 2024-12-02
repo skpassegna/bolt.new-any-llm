@@ -161,12 +161,12 @@ You can use Docker's target feature to specify the build environment instead of 
 
 __Development build__
 ```bash
-docker build . --target bolt-ai-development
+docker build . --target ottodev-ai-development
 ```
 
 __Production build__
 ```bash
-docker build . --target bolt-ai-production
+docker build . --target ottodev-ai-production
 ```
 
 ### 2. Docker Compose with Profiles to Run the Container

@@ -36,8 +36,8 @@ const WithTooltip = ({
             max-h-[300px]
             select-none
             rounded-md
-            bg-bolt-elements-background-depth-3
-            text-bolt-elements-textPrimary
+            bg-ottodev-elements-background-depth-3
+            text-ottodev-elements-textPrimary
             text-sm
             leading-tight
             shadow-lg
@@ -58,7 +58,7 @@ const WithTooltip = ({
           <div className="break-words">{tooltip}</div>
           <Tooltip.Arrow
             className={`
-              fill-bolt-elements-background-depth-3
+              fill-ottodev-elements-background-depth-3
               ${arrowClassName}
             `}
             width={12}

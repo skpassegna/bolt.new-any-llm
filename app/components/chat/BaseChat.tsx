@@ -35,7 +35,7 @@ const ModelSelector = ({ model, setModel, provider, setProvider, modelList, prov
           const firstModel = [...modelList].find((m) => m.provider == e.target.value);
           setModel(firstModel ? firstModel.name : '');
         }}
-        className="flex-1 p-2 rounded-lg border border-bolt-elements-borderColor bg-bolt-elements-prompt-background text-bolt-elements-textPrimary focus:outline-none focus:ring-2 focus:ring-bolt-elements-focus transition-all"
+        className="flex-1 p-2 rounded-lg border border-ottodev-elements-borderColor bg-ottodev-elements-prompt-background text-ottodev-elements-textPrimary focus:outline-none focus:ring-2 focus:ring-ottodev-elements-focus transition-all"
       >
         {providerList.map((provider: ProviderInfo) => (
           <option key={provider.name} value={provider.name}>
@@ -47,7 +47,7 @@ const ModelSelector = ({ model, setModel, provider, setProvider, modelList, prov
         key={provider?.name}
         value={model}
         onChange={(e) => setModel(e.target.value)}
-        className="flex-1 p-2 rounded-lg border border-bolt-elements-borderColor bg-bolt-elements-prompt-background text-bolt-elements-textPrimary focus:outline-none focus:ring-2 focus:ring-bolt-elements-focus transition-all lg:max-w-[70%]"
+        className="flex-1 p-2 rounded-lg border border-ottodev-elements-borderColor bg-ottodev-elements-prompt-background text-ottodev-elements-textPrimary focus:outline-none focus:ring-2 focus:ring-ottodev-elements-focus transition-all lg:max-w-[70%]"
       >
         {[...modelList]
           .filter((e) => e.provider == provider?.name && e.name)
@@ -164,7 +164,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
         ref={ref}
         className={classNames(
           styles.BaseChat,
-          'relative flex flex-col lg:flex-row h-full w-full overflow-hidden bg-bolt-elements-background-depth-1',
+          'relative flex flex-col lg:flex-row h-full w-full overflow-hidden bg-ottodev-elements-background-depth-1',
         )}
         data-chat-visible={showChat}
       >
@@ -180,10 +180,10 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
           <div className={classNames(styles.Chat, 'flex flex-col flex-grow lg:min-w-[var(--chat-min-width)] h-full')}>
             {!chatStarted && (
               <div id="intro" className="mt-[26vh] max-w-chat mx-auto text-center px-4 lg:px-0">
-                <h1 className="text-3xl lg:text-6xl font-bold text-bolt-elements-textPrimary mb-4 animate-fade-in">
+                <h1 className="text-3xl lg:text-6xl font-bold text-ottodev-elements-textPrimary mb-4 animate-fade-in">
                   Where ideas begin
                 </h1>
-                <p className="text-md lg:text-xl mb-8 text-bolt-elements-textSecondary animate-fade-in animation-delay-200">
+                <p className="text-md lg:text-xl mb-8 text-ottodev-elements-textSecondary animate-fade-in animation-delay-200">
                   Bring ideas to life in seconds or get help on existing projects.
                 </p>
               </div>
@@ -207,7 +207,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
               </ClientOnly>
               <div
                 className={classNames(
-                  'bg-bolt-elements-background-depth-2 p-3 rounded-lg border border-bolt-elements-borderColor relative w-full max-w-chat mx-auto z-prompt mb-6',
+                  'bg-ottodev-elements-background-depth-2 p-3 rounded-lg border border-ottodev-elements-borderColor relative w-full max-w-chat mx-auto z-prompt mb-6',
                   {
                     'sticky bottom-2': chatStarted,
                   },
@@ -244,9 +244,9 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                     <button
                       onClick={() => setIsModelSettingsCollapsed(!isModelSettingsCollapsed)}
                       className={classNames('flex items-center gap-2 p-2 rounded-lg transition-all', {
-                        'bg-bolt-elements-item-backgroundAccent text-bolt-elements-item-contentAccent':
+                        'bg-ottodev-elements-item-backgroundAccent text-ottodev-elements-item-contentAccent':
                           isModelSettingsCollapsed,
-                        'bg-bolt-elements-item-backgroundDefault text-bolt-elements-item-contentDefault':
+                        'bg-ottodev-elements-item-backgroundDefault text-ottodev-elements-item-contentDefault':
                           !isModelSettingsCollapsed,
                       })}
                     >
@@ -278,13 +278,13 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
 
                 <div
                   className={classNames(
-                    'relative shadow-xs border border-bolt-elements-borderColor backdrop-blur rounded-lg',
+                    'relative shadow-xs border border-ottodev-elements-borderColor backdrop-blur rounded-lg',
                   )}
                 >
                   <textarea
                     ref={textareaRef}
                     className={
-                      'w-full pl-4 pt-4 pr-16 focus:outline-none resize-none text-bolt-elements-textPrimary placeholder-bolt-elements-textTertiary bg-transparent text-sm'
+                      'w-full pl-4 pt-4 pr-16 focus:outline-none resize-none text-ottodev-elements-textPrimary placeholder-ottodev-elements-textTertiary bg-transparent text-sm'
                     }
                     onKeyDown={(event) => {
                       if (event.key === 'Enter') {
@@ -331,14 +331,14 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                         disabled={input.length === 0 || enhancingPrompt}
                         className={classNames('transition-all', {
                           'opacity-100!': enhancingPrompt,
-                          'text-bolt-elements-item-contentAccent! pr-1.5 enabled:hover:bg-bolt-elements-item-backgroundAccent!':
+                          'text-ottodev-elements-item-contentAccent! pr-1.5 enabled:hover:bg-ottodev-elements-item-backgroundAccent!':
                             promptEnhanced,
                         })}
                         onClick={() => enhancePrompt?.()}
                       >
                         {enhancingPrompt ? (
                           <>
-                            <div className="i-svg-spinners:90-ring-with-bg text-bolt-elements-loader-progress text-xl animate-spin"></div>
+                            <div className="i-svg-spinners:90-ring-with-bg text-ottodev-elements-loader-progress text-xl animate-spin"></div>
                             <div className="ml-1.5">Enhancing prompt...</div>
                           </>
                         ) : (
@@ -351,9 +351,9 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                       {chatStarted && <ClientOnly>{() => <ExportChatButton exportChat={exportChat} />}</ClientOnly>}
                     </div>
                     {input.length > 3 ? (
-                      <div className="text-xs text-bolt-elements-textTertiary">
-                        Use <kbd className="kdb px-1.5 py-0.5 rounded bg-bolt-elements-background-depth-2">Shift</kbd> +{' '}
-                        <kbd className="kdb px-1.5 py-0.5 rounded bg-bolt-elements-background-depth-2">Return</kbd> a
+                      <div className="text-xs text-ottodev-elements-textTertiary">
+                        Use <kbd className="kdb px-1.5 py-0.5 rounded bg-ottodev-elements-background-depth-2">Shift</kbd> +{' '}
+                        <kbd className="kdb px-1.5 py-0.5 rounded bg-ottodev-elements-background-depth-2">Return</kbd> a
                         new line
                       </div>
                     ) : null}

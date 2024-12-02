@@ -11,15 +11,15 @@ interface HistoryItemProps {
 
 export function HistoryItem({ item, onDelete, onDuplicate, exportChat }: HistoryItemProps) {
   return (
-    <div className="group rounded-md text-bolt-elements-textSecondary hover:text-bolt-elements-textPrimary hover:bg-bolt-elements-background-depth-3 overflow-hidden flex justify-between items-center px-2 py-1">
+    <div className="group rounded-md text-ottodev-elements-textSecondary hover:text-ottodev-elements-textPrimary hover:bg-ottodev-elements-background-depth-3 overflow-hidden flex justify-between items-center px-2 py-1">
       <a href={`/chat/${item.urlId}`} className="flex w-full relative truncate block">
         {item.description}
-        <div className="absolute right-0 z-1 top-0 bottom-0 bg-gradient-to-l from-bolt-elements-background-depth-2 group-hover:from-bolt-elements-background-depth-3 box-content pl-3 to-transparent w-10 flex justify-end group-hover:w-15 group-hover:from-99%">
-          <div className="flex items-center p-1 text-bolt-elements-textSecondary opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="absolute right-0 z-1 top-0 bottom-0 bg-gradient-to-l from-ottodev-elements-background-depth-2 group-hover:from-ottodev-elements-background-depth-3 box-content pl-3 to-transparent w-10 flex justify-end group-hover:w-15 group-hover:from-99%">
+          <div className="flex items-center p-1 text-ottodev-elements-textSecondary opacity-0 group-hover:opacity-100 transition-opacity">
             <WithTooltip tooltip="Export chat">
               <button
                 type="button"
-                className="i-ph:download-simple scale-110 mr-2 hover:text-bolt-elements-item-contentAccent"
+                className="i-ph:download-simple scale-110 mr-2 hover:text-ottodev-elements-item-contentAccent"
                 onClick={(event) => {
                   event.preventDefault();
                   exportChat(item.id);
@@ -31,7 +31,7 @@ export function HistoryItem({ item, onDelete, onDuplicate, exportChat }: History
               <WithTooltip tooltip="Duplicate chat">
                 <button
                   type="button"
-                  className="i-ph:copy scale-110 mr-2 hover:text-bolt-elements-item-contentAccent"
+                  className="i-ph:copy scale-110 mr-2 hover:text-ottodev-elements-item-contentAccent"
                   onClick={() => onDuplicate?.(item.id)}
                   title="Duplicate chat"
                 />
@@ -41,7 +41,7 @@ export function HistoryItem({ item, onDelete, onDuplicate, exportChat }: History
               <WithTooltip tooltip="Delete chat">
                 <button
                   type="button"
-                  className="i-ph:trash scale-110 hover:text-bolt-elements-button-danger-text"
+                  className="i-ph:trash scale-110 hover:text-ottodev-elements-button-danger-text"
                   onClick={(event) => {
                     event.preventDefault();
                     onDelete?.(event);

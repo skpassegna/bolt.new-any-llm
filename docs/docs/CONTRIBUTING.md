@@ -148,10 +148,10 @@ You can use Docker's target feature to specify the build environment:
 
 ```bash
 # Development build
-docker build . --target bolt-ai-development
+docker build . --target ottodev-ai-development
 
 # Production build
-docker build . --target bolt-ai-production
+docker build . --target ottodev-ai-production
 ```
 
 ### 3. Docker Compose with Profiles
@@ -172,10 +172,10 @@ After building using any of the methods above, run the container with:
 
 ```bash
 # Development
-docker run -p 5173:5173 --env-file .env.local bolt-ai:development
+docker run -p 5173:5173 --env-file .env.local ottodev-ai:development
 
 # Production
-docker run -p 5173:5173 --env-file .env.local bolt-ai:production
+docker run -p 5173:5173 --env-file .env.local ottodev-ai:production
 ```
 
 ## Deployment with Coolify

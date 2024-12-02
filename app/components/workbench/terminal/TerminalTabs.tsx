@@ -85,8 +85,8 @@ export const TerminalTabs = memo(() => {
       }}
     >
       <div className="h-full">
-        <div className="bg-bolt-elements-terminals-background h-full flex flex-col">
-          <div className="flex items-center bg-bolt-elements-background-depth-2 border-y border-bolt-elements-borderColor gap-1.5 min-h-[34px] p-2">
+        <div className="bg-ottodev-elements-terminals-background h-full flex flex-col">
+          <div className="flex items-center bg-ottodev-elements-background-depth-2 border-y border-ottodev-elements-borderColor gap-1.5 min-h-[34px] p-2">
             {Array.from({ length: terminalCount + 1 }, (_, index) => {
               const isActive = activeTerminal === index;
 
@@ -98,9 +98,9 @@ export const TerminalTabs = memo(() => {
                       className={classNames(
                         'flex items-center text-sm cursor-pointer gap-1.5 px-3 py-2 h-full whitespace-nowrap rounded-full',
                         {
-                          'bg-bolt-elements-terminals-buttonBackground text-bolt-elements-textSecondary hover:text-bolt-elements-textPrimary':
+                          'bg-ottodev-elements-terminals-buttonBackground text-ottodev-elements-textSecondary hover:text-ottodev-elements-textPrimary':
                             isActive,
-                          'bg-bolt-elements-background-depth-2 text-bolt-elements-textSecondary hover:bg-bolt-elements-terminals-buttonBackground':
+                          'bg-ottodev-elements-background-depth-2 text-ottodev-elements-textSecondary hover:bg-ottodev-elements-terminals-buttonBackground':
                             !isActive,
                         },
                       )}
@@ -116,8 +116,8 @@ export const TerminalTabs = memo(() => {
                         className={classNames(
                           'flex items-center text-sm cursor-pointer gap-1.5 px-3 py-2 h-full whitespace-nowrap rounded-full',
                           {
-                            'bg-bolt-elements-terminals-buttonBackground text-bolt-elements-textPrimary': isActive,
-                            'bg-bolt-elements-background-depth-2 text-bolt-elements-textSecondary hover:bg-bolt-elements-terminals-buttonBackground':
+                            'bg-ottodev-elements-terminals-buttonBackground text-ottodev-elements-textPrimary': isActive,
+                            'bg-ottodev-elements-background-depth-2 text-ottodev-elements-textSecondary hover:bg-ottodev-elements-terminals-buttonBackground':
                               !isActive,
                           },
                         )}
